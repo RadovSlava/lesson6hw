@@ -15,18 +15,31 @@
 <body>
 
     <form>
-        Youre name (required):<br>
-        <input type="text" name="youre name" size="30" required><br>
-        Youre email (required):<br>
-        <input type="text" name="youre email" size="30" required><br>
-        
-        Who are you?<br>
-        <input type="radio" name="gender" value="male" checked> Male<br>
-        <input type="radio" name="gender" value="female"> Female<br>
-        <input type="radio" name="gender" value="other"> Other<br>
+        <label for="firstname"> Youre name (required)</label>
+        <input id="firstname" type="text" name="youre name" size="30" required><br>
 
-        Subject:<br>
-        <input list="select" name="placeholder" size="30">
+        <label for="youre email"> Youre email (required)</label><br>
+        <input id="Youre email" type="text" name="youre email" size="30" required>
+
+
+        <fieldset>
+            <legend>Who are you?</legend>
+            <div>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male">Male</label>
+            </div>
+            <div>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>
+            </div>
+            <div>
+                <input type="radio" name="gender" id="no-specified" value="no-specified">
+                <label for="no-specified">Not specified</label>
+            </div>
+        </fieldset>
+
+        <label for="placeholder">Select</label>
+        <input id="placeholder" list="select" name="placeholder" size="30">
         <datalist id="select">
             <option value="C">
             <option value="D">
@@ -35,8 +48,8 @@
             <option value="G">
         </datalist>
         <br>
-        Youre message:<br>
-        <textarea name="comment" id="comment" cols="50" rows="10"></textarea><br>
+        <label for="comment"> Youre message </label>
+        <textarea id="comment" name="comment" id="comment" cols="50" rows="10"></textarea>
         <input type="submit" value="SEND">
     </form>
 
